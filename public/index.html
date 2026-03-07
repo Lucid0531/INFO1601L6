@@ -12,13 +12,29 @@
     <input type="button" id="alertBtn" value="alert" onclick="alertFun()"/>
     <input type="button" value="confirm" onclick="confirmFun()"/>
     <input type="button" value="prompt" onclick="promptFun()"/>
+    <input id="myBtn" type="button" onclick="myFun()" value="click me">
 
     <span id="result"></span>
 
     <script>
-      const result = document.querySelector('#result');
-      result.innerHTML = '<h2>My Span</h2>';
-      result.style.color = 'blue';
+      function myFun() {
+        alert("hello");
+      }
+
+      function myFun2() {
+        console.log("myFun2 called");
+      }
+
+      function logEventType(event) {
+        console.log(event.type);
+      }
+
+      let myBtn = document.querySelector('#myBtn');
+
+      myBtn.addEventListener("click", myFun2);
+
+      myBtn.addEventListener("mouseover", logEventType);
+      myBtn.addEventListener("mouseout", logEventType);
     </script>
     <script src="script.js"></script>
   </body>
