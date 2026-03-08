@@ -27,10 +27,32 @@
                                           
         </tbody>
       </table>
-     </main>
+    </main>
 
-     <script>
-      
-     </script>
+    <script>
+      function drawTable(records) {
+        let result = document.querySelector('#result');
+        let html = '';
+        for(let record of records) {
+          html += `
+            <tr>
+              <td>${record.id}</td>
+              <td>${record.name}</td>
+              <td>${record.brewery_type}</td>
+              <td>${record.website_url}</td>
+            </tr>
+          `;
+        }
+
+        result.innerHTML = html;
+      }
+
+      drawTable([{
+        id: 1,
+        name: "bob's",
+        brewery_type: "fire",
+        website_url: "https://bobs.com"
+      }])
+    </script>
   </body>
 </html>
