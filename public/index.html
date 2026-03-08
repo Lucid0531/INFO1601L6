@@ -16,6 +16,8 @@
 
     <span id="result"></span>
 
+    <img src="https://placecage.lucidinternets.com/200/300" alt="cage img" id="myImg">
+
     <script>
       function myFun() {
         alert("hello");
@@ -29,9 +31,15 @@
         console.log(event.type);
       }
 
+      function loaded() {
+        console.log("img loaded");
+      }
+
       let myBtn = document.querySelector('#myBtn');
+      let myImg = document.querySelector('#myImg');
 
       myBtn.addEventListener("click", myFun2);
+      myImg.addEventListener("load", loaded);
 
       myBtn.addEventListener("mouseover", logEventType);
       myBtn.addEventListener("mouseout", logEventType);
