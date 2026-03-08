@@ -47,12 +47,17 @@
         result.innerHTML = html;
       }
 
-      drawTable([{
-        id: 1,
-        name: "bob's",
-        brewery_type: "fire",
-        website_url: "https://bobs.com"
-      }])
+      async function getData(url) {
+        try{
+          let response = await fetch(url);
+          let result = await response.json();
+          drawTable(result);
+        } catch(e) {
+          console.log(e);
+        }
+      }
+
+      getData("https://api.openbrewerydb.org/v1/breweries/search?query=harry");
     </script>
   </body>
 </html>
