@@ -1,49 +1,36 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>repl.it</title>
-    <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   </head>
+
   <body>
-    <h1>My Page</h1>
+    <nav>
+      <div class="nav-wrapper teal" style="padding-left: 10px;">
+          <a href="#!" class="brand-logo">Ajax Demo</a>
+      </div>
+    </nav>
+    <main class="row" style="padding: 40px">
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>name</th>
+            <th>Type</th>
+            <th>website</th>
+          </tr>
+        </thead>
+        <tbody id="result">
+                                          
+        </tbody>
+      </table>
+     </main>
 
-    <input type="button" id="alertBtn" value="alert" onclick="alertFun()"/>
-    <input type="button" value="confirm" onclick="confirmFun()"/>
-    <input type="button" value="prompt" onclick="promptFun()"/>
-    <input id="myBtn" type="button" onclick="myFun()" value="click me">
-
-    <span id="result"></span>
-
-    <img src="https://placecage.lucidinternets.com/200/300" alt="cage img" id="myImg">
-
-    <script>
-      function myFun() {
-        alert("hello");
-      }
-
-      function myFun2() {
-        console.log("myFun2 called");
-      }
-
-      function logEventType(event) {
-        console.log(event.type);
-      }
-
-      function loaded() {
-        console.log("img loaded");
-      }
-
-      let myBtn = document.querySelector('#myBtn');
-      let myImg = document.querySelector('#myImg');
-
-      myBtn.addEventListener("click", myFun2);
-      myImg.addEventListener("load", loaded);
-
-      myBtn.addEventListener("mouseover", logEventType);
-      myBtn.addEventListener("mouseout", logEventType);
-    </script>
-    <script src="script.js"></script>
+     <script>
+      
+     </script>
   </body>
 </html>
